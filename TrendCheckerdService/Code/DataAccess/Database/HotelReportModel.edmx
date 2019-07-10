@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HotelReportModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Census">
+          <Key>
+            <PropertyRef Name="CensusID" />
+          </Key>
+          <Property Name="CensusID" Type="int" Nullable="false" />
+          <Property Name="PropertyName" Type="varchar" MaxLength="100" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="150" />
+          <Property Name="SpecialName" Type="nvarchar" MaxLength="300" />
+          <Property Name="Address" Type="varchar" MaxLength="150" />
+          <Property Name="Address2" Type="varchar" MaxLength="150" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="StateName" Type="varchar" MaxLength="50" />
+          <Property Name="StateCode" Type="varchar" MaxLength="3" />
+          <Property Name="StateCodeFP" Type="varchar" MaxLength="6" />
+          <Property Name="Zip" Type="varchar" MaxLength="10" />
+          <Property Name="ZIP5" Type="varchar" MaxLength="10" />
+          <Property Name="CountryID" Type="int" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="char" MaxLength="3" />
+          <Property Name="ISOCountryCode" Type="char" MaxLength="3" />
+          <Property Name="OpenDate" Type="char" MaxLength="8" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="PhoneCountryPrefix" Type="varchar" MaxLength="3" />
+          <Property Name="Phone" Type="varchar" MaxLength="30" />
+          <Property Name="Fax" Type="varchar" MaxLength="30" />
+          <Property Name="FaxExtension" Type="varchar" MaxLength="4" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Website" Type="varchar" MaxLength="200" />
+          <Property Name="MailingAddress1" Type="varchar" MaxLength="200" />
+          <Property Name="MailingAddress2" Type="varchar" MaxLength="200" />
+          <Property Name="MailingCity" Type="varchar" MaxLength="100" />
+          <Property Name="MailingState" Type="varchar" MaxLength="10" />
+          <Property Name="MailingPostalCode" Type="varchar" MaxLength="20" />
+          <Property Name="MailingCountry" Type="varchar" MaxLength="50" />
+          <Property Name="MailingCountryCode" Type="char" MaxLength="3" />
+          <Property Name="MSAID" Type="int" />
+          <Property Name="MSAName" Type="varchar" MaxLength="50" />
+          <Property Name="MSACode" Type="int" />
+          <Property Name="TractID" Type="int" />
+          <Property Name="TractName" Type="varchar" MaxLength="61" />
+          <Property Name="TractCode" Type="char" MaxLength="2" />
+          <Property Name="TractCodeFP" Type="varchar" MaxLength="6" />
+          <Property Name="MarketID" Type="int" />
+          <Property Name="MarketName" Type="varchar" MaxLength="61" />
+          <Property Name="MarketCode" Type="char" MaxLength="2" />
+          <Property Name="MarketCodeFP" Type="varchar" MaxLength="6" />
+          <Property Name="MarketStateID" Type="int" />
+          <Property Name="MarketStateName" Type="varchar" MaxLength="50" />
+          <Property Name="MarketStateCode" Type="char" MaxLength="3" />
+          <Property Name="Top25Market" Type="bit" Nullable="false" />
+          <Property Name="CountyID" Type="int" />
+          <Property Name="CountyName" Type="varchar" MaxLength="50" />
+          <Property Name="CountyCode" Type="char" MaxLength="3" />
+          <Property Name="CountyCodeFP" Type="varchar" MaxLength="5" />
+          <Property Name="RegionID" Type="int" />
+          <Property Name="RegionName" Type="varchar" MaxLength="50" />
+          <Property Name="RegionCode" Type="char" MaxLength="2" />
+          <Property Name="RegionCodeFP" Type="varchar" MaxLength="6" />
+          <Property Name="SubContinentID" Type="int" />
+          <Property Name="SubContinentName" Type="varchar" MaxLength="50" />
+          <Property Name="SubContinentCode" Type="char" MaxLength="3" />
+          <Property Name="ContinentID" Type="int" />
+          <Property Name="ContinentName" Type="varchar" MaxLength="50" />
+          <Property Name="ContinentCode" Type="char" MaxLength="3" />
+          <Property Name="TotalRooms" Type="int" />
+          <Property Name="GuestRooms" Type="int" />
+          <Property Name="SuiteRooms" Type="int" />
+          <Property Name="CondoRooms" Type="int" />
+          <Property Name="APR" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="ADR" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="APRLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="ADRLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="OperationID" Type="int" />
+          <Property Name="OperationName" Type="varchar" MaxLength="50" />
+          <Property Name="OperationCode" Type="char" MaxLength="6" />
+          <Property Name="SizeID" Type="int" />
+          <Property Name="SizeName" Type="varchar" MaxLength="50" />
+          <Property Name="TierID" Type="int" />
+          <Property Name="TierName" Type="varchar" MaxLength="50" />
+          <Property Name="TractTierCode" Type="char" MaxLength="6" />
+          <Property Name="ExtendedStayID" Type="int" />
+          <Property Name="ExtendedStayName" Type="varchar" MaxLength="50" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="LocationName" Type="varchar" MaxLength="50" />
+          <Property Name="LocationCode" Type="char" MaxLength="6" />
+          <Property Name="PriceID" Type="int" />
+          <Property Name="PriceName" Type="varchar" MaxLength="50" />
+          <Property Name="MarketPriceCode" Type="char" MaxLength="6" />
+          <Property Name="TotalMeetingSpace" Type="int" />
+          <Property Name="LargestMeetingSpace" Type="int" />
+          <Property Name="Latitude" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Longitude" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="LatLongAccuracy" Type="varchar" MaxLength="50" />
+          <Property Name="ClassID" Type="int" />
+          <Property Name="ClassName" Type="varchar" MaxLength="50" />
+          <Property Name="ClassCode" Type="char" MaxLength="6" />
+          <Property Name="TotalExtendedStayID" Type="int" />
+          <Property Name="TotalExtendedStayName" Type="varchar" MaxLength="25" />
+          <Property Name="StarRatingID" Type="int" />
+          <Property Name="StarRatingYear" Type="int" />
+          <Property Name="HasRestaurant" Type="bit" />
+          <Property Name="IsAllSuites" Type="bit" />
+          <Property Name="IsBoutique" Type="bit" />
+          <Property Name="HasCasino" Type="bit" />
+          <Property Name="HasConference" Type="bit" />
+          <Property Name="HasConvention" Type="bit" />
+          <Property Name="HasGolf" Type="bit" />
+          <Property Name="GolfHoleCount" Type="int" />
+          <Property Name="IsResort" Type="bit" />
+          <Property Name="ResortTypeDescription" Type="varchar" MaxLength="50" />
+          <Property Name="HasSki" Type="bit" />
+          <Property Name="HasSpa" Type="bit" />
+          <Property Name="IsAllInclusive" Type="bit" />
+          <Property Name="IsTimeshare" Type="bit" />
+          <Property Name="HasWaterPark" Type="bit" />
+          <Property Name="HasCondo" Type="bit" />
+          <Property Name="IsCorporateHousing" Type="bit" />
+          <Property Name="HasBeach" Type="bit" />
+          <Property Name="HasPool" Type="bit" />
+          <Property Name="PoolCount" Type="int" />
+          <Property Name="HasBedandBreakfast" Type="bit" />
+          <Property Name="HasBusinessCenter" Type="bit" />
+          <Property Name="HasExerciseRoom" Type="bit" />
+          <Property Name="HasBarLounge" Type="bit" />
+          <Property Name="HasGiftShop" Type="bit" />
+          <Property Name="IsLEEDCertified" Type="bit" />
+          <Property Name="IsLifestyleBrand" Type="bit" />
+          <Property Name="HasMarina" Type="bit" />
+          <Property Name="HasParkingGarage" Type="bit" />
+          <Property Name="HasRetailSpace" Type="bit" />
+          <Property Name="HasShuttle" Type="bit" />
+          <Property Name="IsPermanentClosure" Type="bit" />
+          <Property Name="IsUnderRenovation" Type="bit" />
+          <Property Name="IsUnderConstruction" Type="bit" />
+          <Property Name="HasInteriorCorridors" Type="bit" />
+          <Property Name="HasExteriorCorridors" Type="bit" />
+          <Property Name="FloorCount" Type="int" />
+          <Property Name="SingleLowRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SingleHighRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleLowRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleHighRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteLowRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteHighRate" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SingleRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SingleRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="ChainID" Type="int" />
+          <Property Name="ChainName" Type="varchar" MaxLength="50" />
+          <Property Name="ChainStartDate" Type="datetime" />
+          <Property Name="ChainCodeFP" Type="char" MaxLength="10" />
+          <Property Name="ChainExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="FirstChainName" Type="varchar" MaxLength="50" />
+          <Property Name="FirstChainCode" Type="char" MaxLength="10" />
+          <Property Name="PreviousChainName" Type="varchar" MaxLength="50" />
+          <Property Name="PreviousChainCode" Type="char" MaxLength="10" />
+          <Property Name="PreviousChainExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="PreviousChainStartDate" Type="datetime" />
+          <Property Name="PreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+          <Property Name="TwoPreviousChainName" Type="varchar" MaxLength="50" />
+          <Property Name="TwoPreviousChainCode" Type="char" MaxLength="10" />
+          <Property Name="TwoPreviousChainExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="TwoPreviousChainStartDate" Type="datetime" />
+          <Property Name="TwoPreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+          <Property Name="ThreePreviousChainName" Type="varchar" MaxLength="50" />
+          <Property Name="ThreePreviousChainCode" Type="char" MaxLength="10" />
+          <Property Name="ThreePreviousChainExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="ThreePreviousChainStartDate" Type="datetime" />
+          <Property Name="ThreePreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+          <Property Name="ScaleID" Type="int" />
+          <Property Name="ScaleName" Type="varchar" MaxLength="50" />
+          <Property Name="scalecode" Type="char" MaxLength="6" />
+          <Property Name="CollapsedScaleID" Type="int" />
+          <Property Name="CollapsedScaleName" Type="varchar" MaxLength="50" />
+          <Property Name="CollapsedClassID" Type="int" />
+          <Property Name="CollapsedClassName" Type="varchar" MaxLength="50" />
+          <Property Name="PlusScaleID" Type="int" />
+          <Property Name="PlusScaleName" Type="varchar" MaxLength="50" />
+          <Property Name="MgmtCoID" Type="int" />
+          <Property Name="MgmtCoCode" Type="char" MaxLength="10" />
+          <Property Name="MgmtCoName" Type="varchar" MaxLength="100" />
+          <Property Name="MgmtCoStartDate" Type="datetime" />
+          <Property Name="MgmtCoExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="MgmtCoContactName" Type="varchar" MaxLength="150" />
+          <Property Name="MgmtCoTitle" Type="varchar" MaxLength="150" />
+          <Property Name="MgmtCoAddress" Type="varchar" MaxLength="100" />
+          <Property Name="MgmtCoAddress2" Type="varchar" MaxLength="100" />
+          <Property Name="MgmtCoCity" Type="varchar" MaxLength="60" />
+          <Property Name="MgmtCoState" Type="varchar" MaxLength="3" />
+          <Property Name="MgmtCoCountry" Type="varchar" MaxLength="60" />
+          <Property Name="MgmtCoPostalCode" Type="varchar" MaxLength="25" />
+          <Property Name="MgmtCoPhone" Type="varchar" MaxLength="30" />
+          <Property Name="MgmtCoEmail" Type="varchar" MaxLength="100" />
+          <Property Name="MgmtCoWebsite" Type="varchar" MaxLength="100" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="OwnerCode" Type="char" MaxLength="10" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="100" />
+          <Property Name="OwnerStartDate" Type="datetime" />
+          <Property Name="OwnerExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="OwnerContactName" Type="varchar" MaxLength="150" />
+          <Property Name="OwnerTitle" Type="varchar" MaxLength="150" />
+          <Property Name="OwnerAddress" Type="varchar" MaxLength="100" />
+          <Property Name="OwnerAddress2" Type="varchar" MaxLength="100" />
+          <Property Name="OwnerCity" Type="varchar" MaxLength="60" />
+          <Property Name="OwnerState" Type="varchar" MaxLength="3" />
+          <Property Name="OwnerCountry" Type="varchar" MaxLength="60" />
+          <Property Name="OwnerPostalCode" Type="varchar" MaxLength="25" />
+          <Property Name="OwnerPhone" Type="varchar" MaxLength="30" />
+          <Property Name="OwnerEmail" Type="varchar" MaxLength="100" />
+          <Property Name="OwnerWebsite" Type="varchar" MaxLength="100" />
+          <Property Name="AssetMgmtCoID" Type="int" />
+          <Property Name="AssetMgmtCoCode" Type="varchar" MaxLength="10" />
+          <Property Name="AssetMgmtCoName" Type="varchar" MaxLength="255" />
+          <Property Name="AssetMgmtCoStartDate" Type="datetime" />
+          <Property Name="AssetMgmtCoExternalID" Type="varchar" MaxLength="15" />
+          <Property Name="AssetMgmtCoContactName" Type="varchar" MaxLength="150" />
+          <Property Name="AssetMgmtCoTitle" Type="varchar" MaxLength="150" />
+          <Property Name="AssetMgmtCoAddress" Type="varchar" MaxLength="100" />
+          <Property Name="AssetMgmtCoAddress2" Type="varchar" MaxLength="100" />
+          <Property Name="AssetMgmtCoCity" Type="varchar" MaxLength="60" />
+          <Property Name="AssetMgmtCoState" Type="varchar" MaxLength="3" />
+          <Property Name="AssetMgmtCoCountry" Type="varchar" MaxLength="60" />
+          <Property Name="AssetMgmtCoPostalCode" Type="varchar" MaxLength="30" />
+          <Property Name="AssetMgmtCoPhone" Type="varchar" MaxLength="30" />
+          <Property Name="AssetMgmtCoEmail" Type="varchar" MaxLength="100" />
+          <Property Name="AssetMgmtCoWebsite" Type="varchar" MaxLength="100" />
+          <Property Name="ParentCoID" Type="int" />
+          <Property Name="ParentCoName" Type="varchar" MaxLength="100" />
+          <Property Name="ParentCoCodeFP" Type="varchar" MaxLength="10" />
+          <Property Name="HiltonID" Type="varchar" MaxLength="15" />
+          <Property Name="HyattSpiritCode" Type="varchar" MaxLength="15" />
+          <Property Name="IHGComp" Type="bit" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="CurrencyISO" Type="varchar" MaxLength="3" />
+          <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+          <Property Name="ClosedJan" Type="bit" Nullable="false" />
+          <Property Name="ClosedFeb" Type="bit" Nullable="false" />
+          <Property Name="ClosedMar" Type="bit" Nullable="false" />
+          <Property Name="ClosedApr" Type="bit" Nullable="false" />
+          <Property Name="ClosedMay" Type="bit" Nullable="false" />
+          <Property Name="ClosedJun" Type="bit" Nullable="false" />
+          <Property Name="ClosedJul" Type="bit" Nullable="false" />
+          <Property Name="ClosedAug" Type="bit" Nullable="false" />
+          <Property Name="ClosedSep" Type="bit" Nullable="false" />
+          <Property Name="ClosedOct" Type="bit" Nullable="false" />
+          <Property Name="ClosedNov" Type="bit" Nullable="false" />
+          <Property Name="ClosedDec" Type="bit" Nullable="false" />
+          <Property Name="AllowSegmentation" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlyStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsDailyStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlySegStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsDailySegStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlyAddRevStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsDailyAddRevStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsWeeklyStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="IsWeeklySegStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="CurrentTotalRooms" Type="int" />
+          <Property Name="RoomsAddDropCount1" Type="int" />
+          <Property Name="RoomsAddDropDate1" Type="varchar" MaxLength="12" />
+          <Property Name="RoomsAddDropDate1YYYYMMDD" Type="varchar" MaxLength="8" />
+          <Property Name="RoomsAddDropCount2" Type="int" />
+          <Property Name="RoomsAddDropDate2" Type="varchar" MaxLength="12" />
+          <Property Name="RoomsAddDropDate2YYYYMMDD" Type="varchar" MaxLength="8" />
+          <Property Name="RoomsAddDropCount3" Type="int" />
+          <Property Name="RoomsAddDropDate3" Type="varchar" MaxLength="12" />
+          <Property Name="RoomsAddDropDate3YYYYMMDD" Type="varchar" MaxLength="8" />
+          <Property Name="ShareID" Type="int" Nullable="false" />
+          <Property Name="MembershipID1" Type="char" MaxLength="15" />
+          <Property Name="MembershipName1" Type="varchar" MaxLength="50" />
+          <Property Name="MembershipID2" Type="char" MaxLength="15" />
+          <Property Name="MembershipName2" Type="varchar" MaxLength="50" />
+          <Property Name="MembershipID3" Type="char" MaxLength="15" />
+          <Property Name="MembershipName3" Type="varchar" MaxLength="50" />
+          <Property Name="IsWeeklySTARHotelSurvey" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlySTARParticipationLastMonth" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlyHotelSurvey" Type="bit" Nullable="false" />
+          <Property Name="IsMonthlySegParticipationLastMonth" Type="bit" Nullable="false" />
+          <Property Name="ChainShareID" Type="int" />
+          <Property Name="MgmtCoShareID" Type="int" />
+          <Property Name="OwnerShareID" Type="int" />
+          <Property Name="ParentCoShareID" Type="int" />
+          <Property Name="ExpediaMarketID" Type="int" />
+          <Property Name="IsMonthlyStarParticipantWCompset" Type="bit" />
+          <Property Name="IsDailyStarParticipantWCompset" Type="bit" />
+          <Property Name="IsMonthlySegParticipantWSuffCompset" Type="bit" />
+          <Property Name="IsServicedApartments" Type="bit" />
+          <Property Name="StarRating" Type="varchar" MaxLength="10" />
+          <Property Name="StarRatingCode" Type="decimal" Precision="2" Scale="1" />
+          <Property Name="IsDailyCasinoStarParticipant" Type="bit" />
+          <Property Name="IsWeeklyCasinoStarParticipant" Type="bit" />
+          <Property Name="IsMonthlyCasinoStarParticipant" Type="bit" />
+          <Property Name="IsMonthlyFBStarParticipant" Type="bit" Nullable="false" />
+          <Property Name="RefAustradeSA2ID" Type="int" />
+          <Property Name="AustradeAccommodationTypeID" Type="int" />
+          <Property Name="AustradeAccommodationOverride" Type="bit" />
+          <Property Name="AustradeSA2Override" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="HotelReportModelStoreContainer">
+          <EntitySet Name="Census" EntityType="Self.Census" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HotelReportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Censu">
+          <Key>
+            <PropertyRef Name="CensusID" />
+          </Key>
+          <Property Name="CensusID" Type="Int32" Nullable="false" />
+          <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="StateCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ISOCountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="OpenDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ClosedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="PhoneCountryPrefix" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FaxExtension" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MailingAddress1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MailingAddress2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MailingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MailingState" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MailingPostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MailingCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MailingCountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="MSAID" Type="Int32" />
+          <Property Name="MSAName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MSACode" Type="Int32" />
+          <Property Name="TractID" Type="Int32" />
+          <Property Name="TractName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="TractCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="TractCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MarketID" Type="Int32" />
+          <Property Name="MarketName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="MarketCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MarketCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MarketStateID" Type="Int32" />
+          <Property Name="MarketStateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MarketStateCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="Top25Market" Type="Boolean" Nullable="false" />
+          <Property Name="CountyID" Type="Int32" />
+          <Property Name="CountyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountyCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CountyCodeFP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="RegionID" Type="Int32" />
+          <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RegionCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="RegionCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SubContinentID" Type="Int32" />
+          <Property Name="SubContinentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubContinentCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ContinentID" Type="Int32" />
+          <Property Name="ContinentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContinentCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TotalRooms" Type="Int32" />
+          <Property Name="GuestRooms" Type="Int32" />
+          <Property Name="SuiteRooms" Type="Int32" />
+          <Property Name="CondoRooms" Type="Int32" />
+          <Property Name="APR" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ADR" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="APRLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ADRLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="OperationID" Type="Int32" />
+          <Property Name="OperationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OperationCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="SizeID" Type="Int32" />
+          <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TierID" Type="Int32" />
+          <Property Name="TierName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TractTierCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ExtendedStayID" Type="Int32" />
+          <Property Name="ExtendedStayName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LocationID" Type="Int32" />
+          <Property Name="LocationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LocationCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="PriceID" Type="Int32" />
+          <Property Name="PriceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MarketPriceCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="TotalMeetingSpace" Type="Int32" />
+          <Property Name="LargestMeetingSpace" Type="Int32" />
+          <Property Name="Latitude" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Longitude" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="LatLongAccuracy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassID" Type="Int32" />
+          <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="TotalExtendedStayID" Type="Int32" />
+          <Property Name="TotalExtendedStayName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="StarRatingID" Type="Int32" />
+          <Property Name="StarRatingYear" Type="Int32" />
+          <Property Name="HasRestaurant" Type="Boolean" />
+          <Property Name="IsAllSuites" Type="Boolean" />
+          <Property Name="IsBoutique" Type="Boolean" />
+          <Property Name="HasCasino" Type="Boolean" />
+          <Property Name="HasConference" Type="Boolean" />
+          <Property Name="HasConvention" Type="Boolean" />
+          <Property Name="HasGolf" Type="Boolean" />
+          <Property Name="GolfHoleCount" Type="Int32" />
+          <Property Name="IsResort" Type="Boolean" />
+          <Property Name="ResortTypeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HasSki" Type="Boolean" />
+          <Property Name="HasSpa" Type="Boolean" />
+          <Property Name="IsAllInclusive" Type="Boolean" />
+          <Property Name="IsTimeshare" Type="Boolean" />
+          <Property Name="HasWaterPark" Type="Boolean" />
+          <Property Name="HasCondo" Type="Boolean" />
+          <Property Name="IsCorporateHousing" Type="Boolean" />
+          <Property Name="HasBeach" Type="Boolean" />
+          <Property Name="HasPool" Type="Boolean" />
+          <Property Name="PoolCount" Type="Int32" />
+          <Property Name="HasBedandBreakfast" Type="Boolean" />
+          <Property Name="HasBusinessCenter" Type="Boolean" />
+          <Property Name="HasExerciseRoom" Type="Boolean" />
+          <Property Name="HasBarLounge" Type="Boolean" />
+          <Property Name="HasGiftShop" Type="Boolean" />
+          <Property Name="IsLEEDCertified" Type="Boolean" />
+          <Property Name="IsLifestyleBrand" Type="Boolean" />
+          <Property Name="HasMarina" Type="Boolean" />
+          <Property Name="HasParkingGarage" Type="Boolean" />
+          <Property Name="HasRetailSpace" Type="Boolean" />
+          <Property Name="HasShuttle" Type="Boolean" />
+          <Property Name="IsPermanentClosure" Type="Boolean" />
+          <Property Name="IsUnderRenovation" Type="Boolean" />
+          <Property Name="IsUnderConstruction" Type="Boolean" />
+          <Property Name="HasInteriorCorridors" Type="Boolean" />
+          <Property Name="HasExteriorCorridors" Type="Boolean" />
+          <Property Name="FloorCount" Type="Int32" />
+          <Property Name="SingleLowRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SingleHighRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleLowRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleHighRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteLowRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteHighRate" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SingleRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SingleRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="DoubleRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="SuiteRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ChainID" Type="Int32" />
+          <Property Name="ChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChainStartDate" Type="DateTime" Precision="3" />
+          <Property Name="ChainCodeFP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FirstChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PreviousChainStartDate" Type="DateTime" Precision="3" />
+          <Property Name="PreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="TwoPreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TwoPreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TwoPreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TwoPreviousChainStartDate" Type="DateTime" Precision="3" />
+          <Property Name="TwoPreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ThreePreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ThreePreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ThreePreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ThreePreviousChainStartDate" Type="DateTime" Precision="3" />
+          <Property Name="ThreePreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ScaleID" Type="Int32" />
+          <Property Name="ScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="scalecode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="CollapsedScaleID" Type="Int32" />
+          <Property Name="CollapsedScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CollapsedClassID" Type="Int32" />
+          <Property Name="CollapsedClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PlusScaleID" Type="Int32" />
+          <Property Name="PlusScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoID" Type="Int32" />
+          <Property Name="MgmtCoCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MgmtCoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoStartDate" Type="DateTime" Precision="3" />
+          <Property Name="MgmtCoExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoPostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MgmtCoWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="OwnerCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="OwnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerStartDate" Type="DateTime" Precision="3" />
+          <Property Name="OwnerExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerPostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoID" Type="Int32" />
+          <Property Name="AssetMgmtCoCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoStartDate" Type="DateTime" Precision="3" />
+          <Property Name="AssetMgmtCoExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoPostalCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AssetMgmtCoWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ParentCoID" Type="Int32" />
+          <Property Name="ParentCoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ParentCoCodeFP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HiltonID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="HyattSpiritCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="IHGComp" Type="Boolean" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="CurrencyISO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CurrencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedJan" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedFeb" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedMar" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedApr" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedMay" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedJun" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedJul" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedAug" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedSep" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedOct" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedNov" Type="Boolean" Nullable="false" />
+          <Property Name="ClosedDec" Type="Boolean" Nullable="false" />
+          <Property Name="AllowSegmentation" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlyStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsDailyStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlySegStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsDailySegStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlyAddRevStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsDailyAddRevStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsWeeklyStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="IsWeeklySegStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="CurrentTotalRooms" Type="Int32" />
+          <Property Name="RoomsAddDropCount1" Type="Int32" />
+          <Property Name="RoomsAddDropDate1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="RoomsAddDropDate1YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="RoomsAddDropCount2" Type="Int32" />
+          <Property Name="RoomsAddDropDate2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="RoomsAddDropDate2YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="RoomsAddDropCount3" Type="Int32" />
+          <Property Name="RoomsAddDropDate3" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="RoomsAddDropDate3YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ShareID" Type="Int32" Nullable="false" />
+          <Property Name="MembershipID1" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MembershipName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MembershipID2" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MembershipName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MembershipID3" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MembershipName3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsWeeklySTARHotelSurvey" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlySTARParticipationLastMonth" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlyHotelSurvey" Type="Boolean" Nullable="false" />
+          <Property Name="IsMonthlySegParticipationLastMonth" Type="Boolean" Nullable="false" />
+          <Property Name="ChainShareID" Type="Int32" />
+          <Property Name="MgmtCoShareID" Type="Int32" />
+          <Property Name="OwnerShareID" Type="Int32" />
+          <Property Name="ParentCoShareID" Type="Int32" />
+          <Property Name="ExpediaMarketID" Type="Int32" />
+          <Property Name="IsMonthlyStarParticipantWCompset" Type="Boolean" />
+          <Property Name="IsDailyStarParticipantWCompset" Type="Boolean" />
+          <Property Name="IsMonthlySegParticipantWSuffCompset" Type="Boolean" />
+          <Property Name="IsServicedApartments" Type="Boolean" />
+          <Property Name="StarRating" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="StarRatingCode" Type="Decimal" Precision="2" Scale="1" />
+          <Property Name="IsDailyCasinoStarParticipant" Type="Boolean" />
+          <Property Name="IsWeeklyCasinoStarParticipant" Type="Boolean" />
+          <Property Name="IsMonthlyCasinoStarParticipant" Type="Boolean" />
+          <Property Name="IsMonthlyFBStarParticipant" Type="Boolean" Nullable="false" />
+          <Property Name="RefAustradeSA2ID" Type="Int32" />
+          <Property Name="AustradeAccommodationTypeID" Type="Int32" />
+          <Property Name="AustradeAccommodationOverride" Type="Boolean" />
+          <Property Name="AustradeSA2Override" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="HotelReportEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Census" EntityType="HotelReportModel.Censu" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HotelReportModelStoreContainer" CdmEntityContainer="HotelReportEntities">
+          <EntitySetMapping Name="Census">
+            <EntityTypeMapping TypeName="HotelReportModel.Censu">
+              <MappingFragment StoreEntitySet="Census">
+                <ScalarProperty Name="CensusID" ColumnName="CensusID" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="SpecialName" ColumnName="SpecialName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+                <ScalarProperty Name="StateCodeFP" ColumnName="StateCodeFP" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="ZIP5" ColumnName="ZIP5" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="ISOCountryCode" ColumnName="ISOCountryCode" />
+                <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+                <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="PhoneCountryPrefix" ColumnName="PhoneCountryPrefix" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FaxExtension" ColumnName="FaxExtension" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="MailingAddress1" ColumnName="MailingAddress1" />
+                <ScalarProperty Name="MailingAddress2" ColumnName="MailingAddress2" />
+                <ScalarProperty Name="MailingCity" ColumnName="MailingCity" />
+                <ScalarProperty Name="MailingState" ColumnName="MailingState" />
+                <ScalarProperty Name="MailingPostalCode" ColumnName="MailingPostalCode" />
+                <ScalarProperty Name="MailingCountry" ColumnName="MailingCountry" />
+                <ScalarProperty Name="MailingCountryCode" ColumnName="MailingCountryCode" />
+                <ScalarProperty Name="MSAID" ColumnName="MSAID" />
+                <ScalarProperty Name="MSAName" ColumnName="MSAName" />
+                <ScalarProperty Name="MSACode" ColumnName="MSACode" />
+                <ScalarProperty Name="TractID" ColumnName="TractID" />
+                <ScalarProperty Name="TractName" ColumnName="TractName" />
+                <ScalarProperty Name="TractCode" ColumnName="TractCode" />
+                <ScalarProperty Name="TractCodeFP" ColumnName="TractCodeFP" />
+                <ScalarProperty Name="MarketID" ColumnName="MarketID" />
+                <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+                <ScalarProperty Name="MarketCode" ColumnName="MarketCode" />
+                <ScalarProperty Name="MarketCodeFP" ColumnName="MarketCodeFP" />
+                <ScalarProperty Name="MarketStateID" ColumnName="MarketStateID" />
+                <ScalarProperty Name="MarketStateName" ColumnName="MarketStateName" />
+                <ScalarProperty Name="MarketStateCode" ColumnName="MarketStateCode" />
+                <ScalarProperty Name="Top25Market" ColumnName="Top25Market" />
+                <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+                <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+                <ScalarProperty Name="CountyCode" ColumnName="CountyCode" />
+                <ScalarProperty Name="CountyCodeFP" ColumnName="CountyCodeFP" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+                <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+                <ScalarProperty Name="RegionCodeFP" ColumnName="RegionCodeFP" />
+                <ScalarProperty Name="SubContinentID" ColumnName="SubContinentID" />
+                <ScalarProperty Name="SubContinentName" ColumnName="SubContinentName" />
+                <ScalarProperty Name="SubContinentCode" ColumnName="SubContinentCode" />
+                <ScalarProperty Name="ContinentID" ColumnName="ContinentID" />
+                <ScalarProperty Name="ContinentName" ColumnName="ContinentName" />
+                <ScalarProperty Name="ContinentCode" ColumnName="ContinentCode" />
+                <ScalarProperty Name="TotalRooms" ColumnName="TotalRooms" />
+                <ScalarProperty Name="GuestRooms" ColumnName="GuestRooms" />
+                <ScalarProperty Name="SuiteRooms" ColumnName="SuiteRooms" />
+                <ScalarProperty Name="CondoRooms" ColumnName="CondoRooms" />
+                <ScalarProperty Name="APR" ColumnName="APR" />
+                <ScalarProperty Name="ADR" ColumnName="ADR" />
+                <ScalarProperty Name="APRLocal" ColumnName="APRLocal" />
+                <ScalarProperty Name="ADRLocal" ColumnName="ADRLocal" />
+                <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+                <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+                <ScalarProperty Name="OperationCode" ColumnName="OperationCode" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+                <ScalarProperty Name="TierID" ColumnName="TierID" />
+                <ScalarProperty Name="TierName" ColumnName="TierName" />
+                <ScalarProperty Name="TractTierCode" ColumnName="TractTierCode" />
+                <ScalarProperty Name="ExtendedStayID" ColumnName="ExtendedStayID" />
+                <ScalarProperty Name="ExtendedStayName" ColumnName="ExtendedStayName" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+                <ScalarProperty Name="PriceName" ColumnName="PriceName" />
+                <ScalarProperty Name="MarketPriceCode" ColumnName="MarketPriceCode" />
+                <ScalarProperty Name="TotalMeetingSpace" ColumnName="TotalMeetingSpace" />
+                <ScalarProperty Name="LargestMeetingSpace" ColumnName="LargestMeetingSpace" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="LatLongAccuracy" ColumnName="LatLongAccuracy" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="ClassCode" ColumnName="ClassCode" />
+                <ScalarProperty Name="TotalExtendedStayID" ColumnName="TotalExtendedStayID" />
+                <ScalarProperty Name="TotalExtendedStayName" ColumnName="TotalExtendedStayName" />
+                <ScalarProperty Name="StarRatingID" ColumnName="StarRatingID" />
+                <ScalarProperty Name="StarRatingYear" ColumnName="StarRatingYear" />
+                <ScalarProperty Name="HasRestaurant" ColumnName="HasRestaurant" />
+                <ScalarProperty Name="IsAllSuites" ColumnName="IsAllSuites" />
+                <ScalarProperty Name="IsBoutique" ColumnName="IsBoutique" />
+                <ScalarProperty Name="HasCasino" ColumnName="HasCasino" />
+                <ScalarProperty Name="HasConference" ColumnName="HasConference" />
+                <ScalarProperty Name="HasConvention" ColumnName="HasConvention" />
+                <ScalarProperty Name="HasGolf" ColumnName="HasGolf" />
+                <ScalarProperty Name="GolfHoleCount" ColumnName="GolfHoleCount" />
+                <ScalarProperty Name="IsResort" ColumnName="IsResort" />
+                <ScalarProperty Name="ResortTypeDescription" ColumnName="ResortTypeDescription" />
+                <ScalarProperty Name="HasSki" ColumnName="HasSki" />
+                <ScalarProperty Name="HasSpa" ColumnName="HasSpa" />
+                <ScalarProperty Name="IsAllInclusive" ColumnName="IsAllInclusive" />
+                <ScalarProperty Name="IsTimeshare" ColumnName="IsTimeshare" />
+                <ScalarProperty Name="HasWaterPark" ColumnName="HasWaterPark" />
+                <ScalarProperty Name="HasCondo" ColumnName="HasCondo" />
+                <ScalarProperty Name="IsCorporateHousing" ColumnName="IsCorporateHousing" />
+                <ScalarProperty Name="HasBeach" ColumnName="HasBeach" />
+                <ScalarProperty Name="HasPool" ColumnName="HasPool" />
+                <ScalarProperty Name="PoolCount" ColumnName="PoolCount" />
+                <ScalarProperty Name="HasBedandBreakfast" ColumnName="HasBedandBreakfast" />
+                <ScalarProperty Name="HasBusinessCenter" ColumnName="HasBusinessCenter" />
+                <ScalarProperty Name="HasExerciseRoom" ColumnName="HasExerciseRoom" />
+                <ScalarProperty Name="HasBarLounge" ColumnName="HasBarLounge" />
+                <ScalarProperty Name="HasGiftShop" ColumnName="HasGiftShop" />
+                <ScalarProperty Name="IsLEEDCertified" ColumnName="IsLEEDCertified" />
+                <ScalarProperty Name="IsLifestyleBrand" ColumnName="IsLifestyleBrand" />
+                <ScalarProperty Name="HasMarina" ColumnName="HasMarina" />
+                <ScalarProperty Name="HasParkingGarage" ColumnName="HasParkingGarage" />
+                <ScalarProperty Name="HasRetailSpace" ColumnName="HasRetailSpace" />
+                <ScalarProperty Name="HasShuttle" ColumnName="HasShuttle" />
+                <ScalarProperty Name="IsPermanentClosure" ColumnName="IsPermanentClosure" />
+                <ScalarProperty Name="IsUnderRenovation" ColumnName="IsUnderRenovation" />
+                <ScalarProperty Name="IsUnderConstruction" ColumnName="IsUnderConstruction" />
+                <ScalarProperty Name="HasInteriorCorridors" ColumnName="HasInteriorCorridors" />
+                <ScalarProperty Name="HasExteriorCorridors" ColumnName="HasExteriorCorridors" />
+                <ScalarProperty Name="FloorCount" ColumnName="FloorCount" />
+                <ScalarProperty Name="SingleLowRate" ColumnName="SingleLowRate" />
+                <ScalarProperty Name="SingleHighRate" ColumnName="SingleHighRate" />
+                <ScalarProperty Name="DoubleLowRate" ColumnName="DoubleLowRate" />
+                <ScalarProperty Name="DoubleHighRate" ColumnName="DoubleHighRate" />
+                <ScalarProperty Name="SuiteLowRate" ColumnName="SuiteLowRate" />
+                <ScalarProperty Name="SuiteHighRate" ColumnName="SuiteHighRate" />
+                <ScalarProperty Name="SingleRateLowLocal" ColumnName="SingleRateLowLocal" />
+                <ScalarProperty Name="SingleRateHighLocal" ColumnName="SingleRateHighLocal" />
+                <ScalarProperty Name="DoubleRateLowLocal" ColumnName="DoubleRateLowLocal" />
+                <ScalarProperty Name="DoubleRateHighLocal" ColumnName="DoubleRateHighLocal" />
+                <ScalarProperty Name="SuiteRateLowLocal" ColumnName="SuiteRateLowLocal" />
+                <ScalarProperty Name="SuiteRateHighLocal" ColumnName="SuiteRateHighLocal" />
+                <ScalarProperty Name="ChainID" ColumnName="ChainID" />
+                <ScalarProperty Name="ChainName" ColumnName="ChainName" />
+                <ScalarProperty Name="ChainStartDate" ColumnName="ChainStartDate" />
+                <ScalarProperty Name="ChainCodeFP" ColumnName="ChainCodeFP" />
+                <ScalarProperty Name="ChainExternalID" ColumnName="ChainExternalID" />
+                <ScalarProperty Name="FirstChainName" ColumnName="FirstChainName" />
+                <ScalarProperty Name="FirstChainCode" ColumnName="FirstChainCode" />
+                <ScalarProperty Name="PreviousChainName" ColumnName="PreviousChainName" />
+                <ScalarProperty Name="PreviousChainCode" ColumnName="PreviousChainCode" />
+                <ScalarProperty Name="PreviousChainExternalID" ColumnName="PreviousChainExternalID" />
+                <ScalarProperty Name="PreviousChainStartDate" ColumnName="PreviousChainStartDate" />
+                <ScalarProperty Name="PreviousChainStartYYYYMM" ColumnName="PreviousChainStartYYYYMM" />
+                <ScalarProperty Name="TwoPreviousChainName" ColumnName="TwoPreviousChainName" />
+                <ScalarProperty Name="TwoPreviousChainCode" ColumnName="TwoPreviousChainCode" />
+                <ScalarProperty Name="TwoPreviousChainExternalID" ColumnName="TwoPreviousChainExternalID" />
+                <ScalarProperty Name="TwoPreviousChainStartDate" ColumnName="TwoPreviousChainStartDate" />
+                <ScalarProperty Name="TwoPreviousChainStartYYYYMM" ColumnName="TwoPreviousChainStartYYYYMM" />
+                <ScalarProperty Name="ThreePreviousChainName" ColumnName="ThreePreviousChainName" />
+                <ScalarProperty Name="ThreePreviousChainCode" ColumnName="ThreePreviousChainCode" />
+                <ScalarProperty Name="ThreePreviousChainExternalID" ColumnName="ThreePreviousChainExternalID" />
+                <ScalarProperty Name="ThreePreviousChainStartDate" ColumnName="ThreePreviousChainStartDate" />
+                <ScalarProperty Name="ThreePreviousChainStartYYYYMM" ColumnName="ThreePreviousChainStartYYYYMM" />
+                <ScalarProperty Name="ScaleID" ColumnName="ScaleID" />
+                <ScalarProperty Name="ScaleName" ColumnName="ScaleName" />
+                <ScalarProperty Name="scalecode" ColumnName="scalecode" />
+                <ScalarProperty Name="CollapsedScaleID" ColumnName="CollapsedScaleID" />
+                <ScalarProperty Name="CollapsedScaleName" ColumnName="CollapsedScaleName" />
+                <ScalarProperty Name="CollapsedClassID" ColumnName="CollapsedClassID" />
+                <ScalarProperty Name="CollapsedClassName" ColumnName="CollapsedClassName" />
+                <ScalarProperty Name="PlusScaleID" ColumnName="PlusScaleID" />
+                <ScalarProperty Name="PlusScaleName" ColumnName="PlusScaleName" />
+                <ScalarProperty Name="MgmtCoID" ColumnName="MgmtCoID" />
+                <ScalarProperty Name="MgmtCoCode" ColumnName="MgmtCoCode" />
+                <ScalarProperty Name="MgmtCoName" ColumnName="MgmtCoName" />
+                <ScalarProperty Name="MgmtCoStartDate" ColumnName="MgmtCoStartDate" />
+                <ScalarProperty Name="MgmtCoExternalID" ColumnName="MgmtCoExternalID" />
+                <ScalarProperty Name="MgmtCoContactName" ColumnName="MgmtCoContactName" />
+                <ScalarProperty Name="MgmtCoTitle" ColumnName="MgmtCoTitle" />
+                <ScalarProperty Name="MgmtCoAddress" ColumnName="MgmtCoAddress" />
+                <ScalarProperty Name="MgmtCoAddress2" ColumnName="MgmtCoAddress2" />
+                <ScalarProperty Name="MgmtCoCity" ColumnName="MgmtCoCity" />
+                <ScalarProperty Name="MgmtCoState" ColumnName="MgmtCoState" />
+                <ScalarProperty Name="MgmtCoCountry" ColumnName="MgmtCoCountry" />
+                <ScalarProperty Name="MgmtCoPostalCode" ColumnName="MgmtCoPostalCode" />
+                <ScalarProperty Name="MgmtCoPhone" ColumnName="MgmtCoPhone" />
+                <ScalarProperty Name="MgmtCoEmail" ColumnName="MgmtCoEmail" />
+                <ScalarProperty Name="MgmtCoWebsite" ColumnName="MgmtCoWebsite" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerStartDate" ColumnName="OwnerStartDate" />
+                <ScalarProperty Name="OwnerExternalID" ColumnName="OwnerExternalID" />
+                <ScalarProperty Name="OwnerContactName" ColumnName="OwnerContactName" />
+                <ScalarProperty Name="OwnerTitle" ColumnName="OwnerTitle" />
+                <ScalarProperty Name="OwnerAddress" ColumnName="OwnerAddress" />
+                <ScalarProperty Name="OwnerAddress2" ColumnName="OwnerAddress2" />
+                <ScalarProperty Name="OwnerCity" ColumnName="OwnerCity" />
+                <ScalarProperty Name="OwnerState" ColumnName="OwnerState" />
+                <ScalarProperty Name="OwnerCountry" ColumnName="OwnerCountry" />
+                <ScalarProperty Name="OwnerPostalCode" ColumnName="OwnerPostalCode" />
+                <ScalarProperty Name="OwnerPhone" ColumnName="OwnerPhone" />
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="OwnerWebsite" ColumnName="OwnerWebsite" />
+                <ScalarProperty Name="AssetMgmtCoID" ColumnName="AssetMgmtCoID" />
+                <ScalarProperty Name="AssetMgmtCoCode" ColumnName="AssetMgmtCoCode" />
+                <ScalarProperty Name="AssetMgmtCoName" ColumnName="AssetMgmtCoName" />
+                <ScalarProperty Name="AssetMgmtCoStartDate" ColumnName="AssetMgmtCoStartDate" />
+                <ScalarProperty Name="AssetMgmtCoExternalID" ColumnName="AssetMgmtCoExternalID" />
+                <ScalarProperty Name="AssetMgmtCoContactName" ColumnName="AssetMgmtCoContactName" />
+                <ScalarProperty Name="AssetMgmtCoTitle" ColumnName="AssetMgmtCoTitle" />
+                <ScalarProperty Name="AssetMgmtCoAddress" ColumnName="AssetMgmtCoAddress" />
+                <ScalarProperty Name="AssetMgmtCoAddress2" ColumnName="AssetMgmtCoAddress2" />
+                <ScalarProperty Name="AssetMgmtCoCity" ColumnName="AssetMgmtCoCity" />
+                <ScalarProperty Name="AssetMgmtCoState" ColumnName="AssetMgmtCoState" />
+                <ScalarProperty Name="AssetMgmtCoCountry" ColumnName="AssetMgmtCoCountry" />
+                <ScalarProperty Name="AssetMgmtCoPostalCode" ColumnName="AssetMgmtCoPostalCode" />
+                <ScalarProperty Name="AssetMgmtCoPhone" ColumnName="AssetMgmtCoPhone" />
+                <ScalarProperty Name="AssetMgmtCoEmail" ColumnName="AssetMgmtCoEmail" />
+                <ScalarProperty Name="AssetMgmtCoWebsite" ColumnName="AssetMgmtCoWebsite" />
+                <ScalarProperty Name="ParentCoID" ColumnName="ParentCoID" />
+                <ScalarProperty Name="ParentCoName" ColumnName="ParentCoName" />
+                <ScalarProperty Name="ParentCoCodeFP" ColumnName="ParentCoCodeFP" />
+                <ScalarProperty Name="HiltonID" ColumnName="HiltonID" />
+                <ScalarProperty Name="HyattSpiritCode" ColumnName="HyattSpiritCode" />
+                <ScalarProperty Name="IHGComp" ColumnName="IHGComp" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="CurrencyISO" ColumnName="CurrencyISO" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="ClosedJan" ColumnName="ClosedJan" />
+                <ScalarProperty Name="ClosedFeb" ColumnName="ClosedFeb" />
+                <ScalarProperty Name="ClosedMar" ColumnName="ClosedMar" />
+                <ScalarProperty Name="ClosedApr" ColumnName="ClosedApr" />
+                <ScalarProperty Name="ClosedMay" ColumnName="ClosedMay" />
+                <ScalarProperty Name="ClosedJun" ColumnName="ClosedJun" />
+                <ScalarProperty Name="ClosedJul" ColumnName="ClosedJul" />
+                <ScalarProperty Name="ClosedAug" ColumnName="ClosedAug" />
+                <ScalarProperty Name="ClosedSep" ColumnName="ClosedSep" />
+                <ScalarProperty Name="ClosedOct" ColumnName="ClosedOct" />
+                <ScalarProperty Name="ClosedNov" ColumnName="ClosedNov" />
+                <ScalarProperty Name="ClosedDec" ColumnName="ClosedDec" />
+                <ScalarProperty Name="AllowSegmentation" ColumnName="AllowSegmentation" />
+                <ScalarProperty Name="IsMonthlyStarParticipant" ColumnName="IsMonthlyStarParticipant" />
+                <ScalarProperty Name="IsDailyStarParticipant" ColumnName="IsDailyStarParticipant" />
+                <ScalarProperty Name="IsMonthlySegStarParticipant" ColumnName="IsMonthlySegStarParticipant" />
+                <ScalarProperty Name="IsDailySegStarParticipant" ColumnName="IsDailySegStarParticipant" />
+                <ScalarProperty Name="IsMonthlyAddRevStarParticipant" ColumnName="IsMonthlyAddRevStarParticipant" />
+                <ScalarProperty Name="IsDailyAddRevStarParticipant" ColumnName="IsDailyAddRevStarParticipant" />
+                <ScalarProperty Name="IsWeeklyStarParticipant" ColumnName="IsWeeklyStarParticipant" />
+                <ScalarProperty Name="IsWeeklySegStarParticipant" ColumnName="IsWeeklySegStarParticipant" />
+                <ScalarProperty Name="CurrentTotalRooms" ColumnName="CurrentTotalRooms" />
+                <ScalarProperty Name="RoomsAddDropCount1" ColumnName="RoomsAddDropCount1" />
+                <ScalarProperty Name="RoomsAddDropDate1" ColumnName="RoomsAddDropDate1" />
+                <ScalarProperty Name="RoomsAddDropDate1YYYYMMDD" ColumnName="RoomsAddDropDate1YYYYMMDD" />
+                <ScalarProperty Name="RoomsAddDropCount2" ColumnName="RoomsAddDropCount2" />
+                <ScalarProperty Name="RoomsAddDropDate2" ColumnName="RoomsAddDropDate2" />
+                <ScalarProperty Name="RoomsAddDropDate2YYYYMMDD" ColumnName="RoomsAddDropDate2YYYYMMDD" />
+                <ScalarProperty Name="RoomsAddDropCount3" ColumnName="RoomsAddDropCount3" />
+                <ScalarProperty Name="RoomsAddDropDate3" ColumnName="RoomsAddDropDate3" />
+                <ScalarProperty Name="RoomsAddDropDate3YYYYMMDD" ColumnName="RoomsAddDropDate3YYYYMMDD" />
+                <ScalarProperty Name="ShareID" ColumnName="ShareID" />
+                <ScalarProperty Name="MembershipID1" ColumnName="MembershipID1" />
+                <ScalarProperty Name="MembershipName1" ColumnName="MembershipName1" />
+                <ScalarProperty Name="MembershipID2" ColumnName="MembershipID2" />
+                <ScalarProperty Name="MembershipName2" ColumnName="MembershipName2" />
+                <ScalarProperty Name="MembershipID3" ColumnName="MembershipID3" />
+                <ScalarProperty Name="MembershipName3" ColumnName="MembershipName3" />
+                <ScalarProperty Name="IsWeeklySTARHotelSurvey" ColumnName="IsWeeklySTARHotelSurvey" />
+                <ScalarProperty Name="IsMonthlySTARParticipationLastMonth" ColumnName="IsMonthlySTARParticipationLastMonth" />
+                <ScalarProperty Name="IsMonthlyHotelSurvey" ColumnName="IsMonthlyHotelSurvey" />
+                <ScalarProperty Name="IsMonthlySegParticipationLastMonth" ColumnName="IsMonthlySegParticipationLastMonth" />
+                <ScalarProperty Name="ChainShareID" ColumnName="ChainShareID" />
+                <ScalarProperty Name="MgmtCoShareID" ColumnName="MgmtCoShareID" />
+                <ScalarProperty Name="OwnerShareID" ColumnName="OwnerShareID" />
+                <ScalarProperty Name="ParentCoShareID" ColumnName="ParentCoShareID" />
+                <ScalarProperty Name="ExpediaMarketID" ColumnName="ExpediaMarketID" />
+                <ScalarProperty Name="IsMonthlyStarParticipantWCompset" ColumnName="IsMonthlyStarParticipantWCompset" />
+                <ScalarProperty Name="IsDailyStarParticipantWCompset" ColumnName="IsDailyStarParticipantWCompset" />
+                <ScalarProperty Name="IsMonthlySegParticipantWSuffCompset" ColumnName="IsMonthlySegParticipantWSuffCompset" />
+                <ScalarProperty Name="IsServicedApartments" ColumnName="IsServicedApartments" />
+                <ScalarProperty Name="StarRating" ColumnName="StarRating" />
+                <ScalarProperty Name="StarRatingCode" ColumnName="StarRatingCode" />
+                <ScalarProperty Name="IsDailyCasinoStarParticipant" ColumnName="IsDailyCasinoStarParticipant" />
+                <ScalarProperty Name="IsWeeklyCasinoStarParticipant" ColumnName="IsWeeklyCasinoStarParticipant" />
+                <ScalarProperty Name="IsMonthlyCasinoStarParticipant" ColumnName="IsMonthlyCasinoStarParticipant" />
+                <ScalarProperty Name="IsMonthlyFBStarParticipant" ColumnName="IsMonthlyFBStarParticipant" />
+                <ScalarProperty Name="RefAustradeSA2ID" ColumnName="RefAustradeSA2ID" />
+                <ScalarProperty Name="AustradeAccommodationTypeID" ColumnName="AustradeAccommodationTypeID" />
+                <ScalarProperty Name="AustradeAccommodationOverride" ColumnName="AustradeAccommodationOverride" />
+                <ScalarProperty Name="AustradeSA2Override" ColumnName="AustradeSA2Override" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,12 @@
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\TrendCheckerdService.dll.config
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\TrendCheckerdService.dll
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\TrendCheckerdService.pdb
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\obj\Debug\TrendCheckerdService.csprojAssemblyReference.cache
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\obj\Debug\TrendCheckerdService.csproj.CoreCompileInputs.cache
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\obj\Debug\TrendCheckerdService.dll
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\obj\Debug\TrendCheckerdService.pdb
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\EntityFramework.dll
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\EntityFramework.SqlServer.dll
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\EntityFramework.xml
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\bin\EntityFramework.SqlServer.xml
+C:\Users\wbratz\source\repos\TrendCheckerdService\TrendCheckerdService\obj\Debug\TrendCheckerdService.csproj.CopyComplete

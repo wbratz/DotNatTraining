@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelReportModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Census">
+    <Key>
+      <PropertyRef Name="CensusID" />
+    </Key>
+    <Property Name="CensusID" Type="int" Nullable="false" />
+    <Property Name="PropertyName" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="150" />
+    <Property Name="SpecialName" Type="nvarchar" MaxLength="300" />
+    <Property Name="Address" Type="varchar" MaxLength="150" />
+    <Property Name="Address2" Type="varchar" MaxLength="150" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" />
+    <Property Name="StateCode" Type="varchar" MaxLength="3" />
+    <Property Name="StateCodeFP" Type="varchar" MaxLength="6" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" />
+    <Property Name="ZIP5" Type="varchar" MaxLength="10" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="char" MaxLength="3" />
+    <Property Name="ISOCountryCode" Type="char" MaxLength="3" />
+    <Property Name="OpenDate" Type="char" MaxLength="8" />
+    <Property Name="ClosedDate" Type="datetime" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="PhoneCountryPrefix" Type="varchar" MaxLength="3" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="FaxExtension" Type="varchar" MaxLength="4" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Website" Type="varchar" MaxLength="200" />
+    <Property Name="MailingAddress1" Type="varchar" MaxLength="200" />
+    <Property Name="MailingAddress2" Type="varchar" MaxLength="200" />
+    <Property Name="MailingCity" Type="varchar" MaxLength="100" />
+    <Property Name="MailingState" Type="varchar" MaxLength="10" />
+    <Property Name="MailingPostalCode" Type="varchar" MaxLength="20" />
+    <Property Name="MailingCountry" Type="varchar" MaxLength="50" />
+    <Property Name="MailingCountryCode" Type="char" MaxLength="3" />
+    <Property Name="MSAID" Type="int" />
+    <Property Name="MSAName" Type="varchar" MaxLength="50" />
+    <Property Name="MSACode" Type="int" />
+    <Property Name="TractID" Type="int" />
+    <Property Name="TractName" Type="varchar" MaxLength="61" />
+    <Property Name="TractCode" Type="char" MaxLength="2" />
+    <Property Name="TractCodeFP" Type="varchar" MaxLength="6" />
+    <Property Name="MarketID" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="61" />
+    <Property Name="MarketCode" Type="char" MaxLength="2" />
+    <Property Name="MarketCodeFP" Type="varchar" MaxLength="6" />
+    <Property Name="MarketStateID" Type="int" />
+    <Property Name="MarketStateName" Type="varchar" MaxLength="50" />
+    <Property Name="MarketStateCode" Type="char" MaxLength="3" />
+    <Property Name="Top25Market" Type="bit" Nullable="false" />
+    <Property Name="CountyID" Type="int" />
+    <Property Name="CountyName" Type="varchar" MaxLength="50" />
+    <Property Name="CountyCode" Type="char" MaxLength="3" />
+    <Property Name="CountyCodeFP" Type="varchar" MaxLength="5" />
+    <Property Name="RegionID" Type="int" />
+    <Property Name="RegionName" Type="varchar" MaxLength="50" />
+    <Property Name="RegionCode" Type="char" MaxLength="2" />
+    <Property Name="RegionCodeFP" Type="varchar" MaxLength="6" />
+    <Property Name="SubContinentID" Type="int" />
+    <Property Name="SubContinentName" Type="varchar" MaxLength="50" />
+    <Property Name="SubContinentCode" Type="char" MaxLength="3" />
+    <Property Name="ContinentID" Type="int" />
+    <Property Name="ContinentName" Type="varchar" MaxLength="50" />
+    <Property Name="ContinentCode" Type="char" MaxLength="3" />
+    <Property Name="TotalRooms" Type="int" />
+    <Property Name="GuestRooms" Type="int" />
+    <Property Name="SuiteRooms" Type="int" />
+    <Property Name="CondoRooms" Type="int" />
+    <Property Name="APR" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="ADR" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="APRLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="ADRLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="OperationID" Type="int" />
+    <Property Name="OperationName" Type="varchar" MaxLength="50" />
+    <Property Name="OperationCode" Type="char" MaxLength="6" />
+    <Property Name="SizeID" Type="int" />
+    <Property Name="SizeName" Type="varchar" MaxLength="50" />
+    <Property Name="TierID" Type="int" />
+    <Property Name="TierName" Type="varchar" MaxLength="50" />
+    <Property Name="TractTierCode" Type="char" MaxLength="6" />
+    <Property Name="ExtendedStayID" Type="int" />
+    <Property Name="ExtendedStayName" Type="varchar" MaxLength="50" />
+    <Property Name="LocationID" Type="int" />
+    <Property Name="LocationName" Type="varchar" MaxLength="50" />
+    <Property Name="LocationCode" Type="char" MaxLength="6" />
+    <Property Name="PriceID" Type="int" />
+    <Property Name="PriceName" Type="varchar" MaxLength="50" />
+    <Property Name="MarketPriceCode" Type="char" MaxLength="6" />
+    <Property Name="TotalMeetingSpace" Type="int" />
+    <Property Name="LargestMeetingSpace" Type="int" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="LatLongAccuracy" Type="varchar" MaxLength="50" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+    <Property Name="ClassCode" Type="char" MaxLength="6" />
+    <Property Name="TotalExtendedStayID" Type="int" />
+    <Property Name="TotalExtendedStayName" Type="varchar" MaxLength="25" />
+    <Property Name="StarRatingID" Type="int" />
+    <Property Name="StarRatingYear" Type="int" />
+    <Property Name="HasRestaurant" Type="bit" />
+    <Property Name="IsAllSuites" Type="bit" />
+    <Property Name="IsBoutique" Type="bit" />
+    <Property Name="HasCasino" Type="bit" />
+    <Property Name="HasConference" Type="bit" />
+    <Property Name="HasConvention" Type="bit" />
+    <Property Name="HasGolf" Type="bit" />
+    <Property Name="GolfHoleCount" Type="int" />
+    <Property Name="IsResort" Type="bit" />
+    <Property Name="ResortTypeDescription" Type="varchar" MaxLength="50" />
+    <Property Name="HasSki" Type="bit" />
+    <Property Name="HasSpa" Type="bit" />
+    <Property Name="IsAllInclusive" Type="bit" />
+    <Property Name="IsTimeshare" Type="bit" />
+    <Property Name="HasWaterPark" Type="bit" />
+    <Property Name="HasCondo" Type="bit" />
+    <Property Name="IsCorporateHousing" Type="bit" />
+    <Property Name="HasBeach" Type="bit" />
+    <Property Name="HasPool" Type="bit" />
+    <Property Name="PoolCount" Type="int" />
+    <Property Name="HasBedandBreakfast" Type="bit" />
+    <Property Name="HasBusinessCenter" Type="bit" />
+    <Property Name="HasExerciseRoom" Type="bit" />
+    <Property Name="HasBarLounge" Type="bit" />
+    <Property Name="HasGiftShop" Type="bit" />
+    <Property Name="IsLEEDCertified" Type="bit" />
+    <Property Name="IsLifestyleBrand" Type="bit" />
+    <Property Name="HasMarina" Type="bit" />
+    <Property Name="HasParkingGarage" Type="bit" />
+    <Property Name="HasRetailSpace" Type="bit" />
+    <Property Name="HasShuttle" Type="bit" />
+    <Property Name="IsPermanentClosure" Type="bit" />
+    <Property Name="IsUnderRenovation" Type="bit" />
+    <Property Name="IsUnderConstruction" Type="bit" />
+    <Property Name="HasInteriorCorridors" Type="bit" />
+    <Property Name="HasExteriorCorridors" Type="bit" />
+    <Property Name="FloorCount" Type="int" />
+    <Property Name="SingleLowRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SingleHighRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleLowRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleHighRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteLowRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteHighRate" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SingleRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SingleRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteRateLowLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteRateHighLocal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="ChainID" Type="int" />
+    <Property Name="ChainName" Type="varchar" MaxLength="50" />
+    <Property Name="ChainStartDate" Type="datetime" />
+    <Property Name="ChainCodeFP" Type="char" MaxLength="10" />
+    <Property Name="ChainExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="FirstChainName" Type="varchar" MaxLength="50" />
+    <Property Name="FirstChainCode" Type="char" MaxLength="10" />
+    <Property Name="PreviousChainName" Type="varchar" MaxLength="50" />
+    <Property Name="PreviousChainCode" Type="char" MaxLength="10" />
+    <Property Name="PreviousChainExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="PreviousChainStartDate" Type="datetime" />
+    <Property Name="PreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+    <Property Name="TwoPreviousChainName" Type="varchar" MaxLength="50" />
+    <Property Name="TwoPreviousChainCode" Type="char" MaxLength="10" />
+    <Property Name="TwoPreviousChainExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="TwoPreviousChainStartDate" Type="datetime" />
+    <Property Name="TwoPreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+    <Property Name="ThreePreviousChainName" Type="varchar" MaxLength="50" />
+    <Property Name="ThreePreviousChainCode" Type="char" MaxLength="10" />
+    <Property Name="ThreePreviousChainExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="ThreePreviousChainStartDate" Type="datetime" />
+    <Property Name="ThreePreviousChainStartYYYYMM" Type="varchar" MaxLength="6" />
+    <Property Name="ScaleID" Type="int" />
+    <Property Name="ScaleName" Type="varchar" MaxLength="50" />
+    <Property Name="scalecode" Type="char" MaxLength="6" />
+    <Property Name="CollapsedScaleID" Type="int" />
+    <Property Name="CollapsedScaleName" Type="varchar" MaxLength="50" />
+    <Property Name="CollapsedClassID" Type="int" />
+    <Property Name="CollapsedClassName" Type="varchar" MaxLength="50" />
+    <Property Name="PlusScaleID" Type="int" />
+    <Property Name="PlusScaleName" Type="varchar" MaxLength="50" />
+    <Property Name="MgmtCoID" Type="int" />
+    <Property Name="MgmtCoCode" Type="char" MaxLength="10" />
+    <Property Name="MgmtCoName" Type="varchar" MaxLength="100" />
+    <Property Name="MgmtCoStartDate" Type="datetime" />
+    <Property Name="MgmtCoExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="MgmtCoContactName" Type="varchar" MaxLength="150" />
+    <Property Name="MgmtCoTitle" Type="varchar" MaxLength="150" />
+    <Property Name="MgmtCoAddress" Type="varchar" MaxLength="100" />
+    <Property Name="MgmtCoAddress2" Type="varchar" MaxLength="100" />
+    <Property Name="MgmtCoCity" Type="varchar" MaxLength="60" />
+    <Property Name="MgmtCoState" Type="varchar" MaxLength="3" />
+    <Property Name="MgmtCoCountry" Type="varchar" MaxLength="60" />
+    <Property Name="MgmtCoPostalCode" Type="varchar" MaxLength="25" />
+    <Property Name="MgmtCoPhone" Type="varchar" MaxLength="30" />
+    <Property Name="MgmtCoEmail" Type="varchar" MaxLength="100" />
+    <Property Name="MgmtCoWebsite" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerID" Type="int" />
+    <Property Name="OwnerCode" Type="char" MaxLength="10" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerStartDate" Type="datetime" />
+    <Property Name="OwnerExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="OwnerContactName" Type="varchar" MaxLength="150" />
+    <Property Name="OwnerTitle" Type="varchar" MaxLength="150" />
+    <Property Name="OwnerAddress" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerAddress2" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerCity" Type="varchar" MaxLength="60" />
+    <Property Name="OwnerState" Type="varchar" MaxLength="3" />
+    <Property Name="OwnerCountry" Type="varchar" MaxLength="60" />
+    <Property Name="OwnerPostalCode" Type="varchar" MaxLength="25" />
+    <Property Name="OwnerPhone" Type="varchar" MaxLength="30" />
+    <Property Name="OwnerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerWebsite" Type="varchar" MaxLength="100" />
+    <Property Name="AssetMgmtCoID" Type="int" />
+    <Property Name="AssetMgmtCoCode" Type="varchar" MaxLength="10" />
+    <Property Name="AssetMgmtCoName" Type="varchar" MaxLength="255" />
+    <Property Name="AssetMgmtCoStartDate" Type="datetime" />
+    <Property Name="AssetMgmtCoExternalID" Type="varchar" MaxLength="15" />
+    <Property Name="AssetMgmtCoContactName" Type="varchar" MaxLength="150" />
+    <Property Name="AssetMgmtCoTitle" Type="varchar" MaxLength="150" />
+    <Property Name="AssetMgmtCoAddress" Type="varchar" MaxLength="100" />
+    <Property Name="AssetMgmtCoAddress2" Type="varchar" MaxLength="100" />
+    <Property Name="AssetMgmtCoCity" Type="varchar" MaxLength="60" />
+    <Property Name="AssetMgmtCoState" Type="varchar" MaxLength="3" />
+    <Property Name="AssetMgmtCoCountry" Type="varchar" MaxLength="60" />
+    <Property Name="AssetMgmtCoPostalCode" Type="varchar" MaxLength="30" />
+    <Property Name="AssetMgmtCoPhone" Type="varchar" MaxLength="30" />
+    <Property Name="AssetMgmtCoEmail" Type="varchar" MaxLength="100" />
+    <Property Name="AssetMgmtCoWebsite" Type="varchar" MaxLength="100" />
+    <Property Name="ParentCoID" Type="int" />
+    <Property Name="ParentCoName" Type="varchar" MaxLength="100" />
+    <Property Name="ParentCoCodeFP" Type="varchar" MaxLength="10" />
+    <Property Name="HiltonID" Type="varchar" MaxLength="15" />
+    <Property Name="HyattSpiritCode" Type="varchar" MaxLength="15" />
+    <Property Name="IHGComp" Type="bit" />
+    <Property Name="CurrencyID" Type="int" />
+    <Property Name="CurrencyISO" Type="varchar" MaxLength="3" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+    <Property Name="ClosedJan" Type="bit" Nullable="false" />
+    <Property Name="ClosedFeb" Type="bit" Nullable="false" />
+    <Property Name="ClosedMar" Type="bit" Nullable="false" />
+    <Property Name="ClosedApr" Type="bit" Nullable="false" />
+    <Property Name="ClosedMay" Type="bit" Nullable="false" />
+    <Property Name="ClosedJun" Type="bit" Nullable="false" />
+    <Property Name="ClosedJul" Type="bit" Nullable="false" />
+    <Property Name="ClosedAug" Type="bit" Nullable="false" />
+    <Property Name="ClosedSep" Type="bit" Nullable="false" />
+    <Property Name="ClosedOct" Type="bit" Nullable="false" />
+    <Property Name="ClosedNov" Type="bit" Nullable="false" />
+    <Property Name="ClosedDec" Type="bit" Nullable="false" />
+    <Property Name="AllowSegmentation" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlyStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsDailyStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlySegStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsDailySegStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlyAddRevStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsDailyAddRevStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsWeeklyStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="IsWeeklySegStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="CurrentTotalRooms" Type="int" />
+    <Property Name="RoomsAddDropCount1" Type="int" />
+    <Property Name="RoomsAddDropDate1" Type="varchar" MaxLength="12" />
+    <Property Name="RoomsAddDropDate1YYYYMMDD" Type="varchar" MaxLength="8" />
+    <Property Name="RoomsAddDropCount2" Type="int" />
+    <Property Name="RoomsAddDropDate2" Type="varchar" MaxLength="12" />
+    <Property Name="RoomsAddDropDate2YYYYMMDD" Type="varchar" MaxLength="8" />
+    <Property Name="RoomsAddDropCount3" Type="int" />
+    <Property Name="RoomsAddDropDate3" Type="varchar" MaxLength="12" />
+    <Property Name="RoomsAddDropDate3YYYYMMDD" Type="varchar" MaxLength="8" />
+    <Property Name="ShareID" Type="int" Nullable="false" />
+    <Property Name="MembershipID1" Type="char" MaxLength="15" />
+    <Property Name="MembershipName1" Type="varchar" MaxLength="50" />
+    <Property Name="MembershipID2" Type="char" MaxLength="15" />
+    <Property Name="MembershipName2" Type="varchar" MaxLength="50" />
+    <Property Name="MembershipID3" Type="char" MaxLength="15" />
+    <Property Name="MembershipName3" Type="varchar" MaxLength="50" />
+    <Property Name="IsWeeklySTARHotelSurvey" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlySTARParticipationLastMonth" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlyHotelSurvey" Type="bit" Nullable="false" />
+    <Property Name="IsMonthlySegParticipationLastMonth" Type="bit" Nullable="false" />
+    <Property Name="ChainShareID" Type="int" />
+    <Property Name="MgmtCoShareID" Type="int" />
+    <Property Name="OwnerShareID" Type="int" />
+    <Property Name="ParentCoShareID" Type="int" />
+    <Property Name="ExpediaMarketID" Type="int" />
+    <Property Name="IsMonthlyStarParticipantWCompset" Type="bit" />
+    <Property Name="IsDailyStarParticipantWCompset" Type="bit" />
+    <Property Name="IsMonthlySegParticipantWSuffCompset" Type="bit" />
+    <Property Name="IsServicedApartments" Type="bit" />
+    <Property Name="StarRating" Type="varchar" MaxLength="10" />
+    <Property Name="StarRatingCode" Type="decimal" Precision="2" Scale="1" />
+    <Property Name="IsDailyCasinoStarParticipant" Type="bit" />
+    <Property Name="IsWeeklyCasinoStarParticipant" Type="bit" />
+    <Property Name="IsMonthlyCasinoStarParticipant" Type="bit" />
+    <Property Name="IsMonthlyFBStarParticipant" Type="bit" Nullable="false" />
+    <Property Name="RefAustradeSA2ID" Type="int" />
+    <Property Name="AustradeAccommodationTypeID" Type="int" />
+    <Property Name="AustradeAccommodationOverride" Type="bit" />
+    <Property Name="AustradeSA2Override" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="HotelReportModelStoreContainer">
+    <EntitySet Name="Census" EntityType="Self.Census" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

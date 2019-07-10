@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelReportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Censu">
+    <Key>
+      <PropertyRef Name="CensusID" />
+    </Key>
+    <Property Name="CensusID" Type="Int32" Nullable="false" />
+    <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SpecialName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="StateCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ISOCountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="OpenDate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ClosedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="PhoneCountryPrefix" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FaxExtension" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MailingAddress1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MailingAddress2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MailingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MailingState" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MailingPostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MailingCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MailingCountryCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MSAID" Type="Int32" />
+    <Property Name="MSAName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MSACode" Type="Int32" />
+    <Property Name="TractID" Type="Int32" />
+    <Property Name="TractName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="TractCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TractCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="MarketID" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="MarketCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MarketCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="MarketStateID" Type="Int32" />
+    <Property Name="MarketStateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MarketStateCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="Top25Market" Type="Boolean" Nullable="false" />
+    <Property Name="CountyID" Type="Int32" />
+    <Property Name="CountyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountyCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CountyCodeFP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RegionID" Type="Int32" />
+    <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RegionCodeFP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="SubContinentID" Type="Int32" />
+    <Property Name="SubContinentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubContinentCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ContinentID" Type="Int32" />
+    <Property Name="ContinentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContinentCode" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="TotalRooms" Type="Int32" />
+    <Property Name="GuestRooms" Type="Int32" />
+    <Property Name="SuiteRooms" Type="Int32" />
+    <Property Name="CondoRooms" Type="Int32" />
+    <Property Name="APR" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="ADR" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="APRLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="ADRLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="OperationID" Type="Int32" />
+    <Property Name="OperationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OperationCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="SizeID" Type="Int32" />
+    <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TierID" Type="Int32" />
+    <Property Name="TierName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TractTierCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="ExtendedStayID" Type="Int32" />
+    <Property Name="ExtendedStayName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocationID" Type="Int32" />
+    <Property Name="LocationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocationCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="PriceID" Type="Int32" />
+    <Property Name="PriceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MarketPriceCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="TotalMeetingSpace" Type="Int32" />
+    <Property Name="LargestMeetingSpace" Type="Int32" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="LatLongAccuracy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassID" Type="Int32" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="TotalExtendedStayID" Type="Int32" />
+    <Property Name="TotalExtendedStayName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StarRatingID" Type="Int32" />
+    <Property Name="StarRatingYear" Type="Int32" />
+    <Property Name="HasRestaurant" Type="Boolean" />
+    <Property Name="IsAllSuites" Type="Boolean" />
+    <Property Name="IsBoutique" Type="Boolean" />
+    <Property Name="HasCasino" Type="Boolean" />
+    <Property Name="HasConference" Type="Boolean" />
+    <Property Name="HasConvention" Type="Boolean" />
+    <Property Name="HasGolf" Type="Boolean" />
+    <Property Name="GolfHoleCount" Type="Int32" />
+    <Property Name="IsResort" Type="Boolean" />
+    <Property Name="ResortTypeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HasSki" Type="Boolean" />
+    <Property Name="HasSpa" Type="Boolean" />
+    <Property Name="IsAllInclusive" Type="Boolean" />
+    <Property Name="IsTimeshare" Type="Boolean" />
+    <Property Name="HasWaterPark" Type="Boolean" />
+    <Property Name="HasCondo" Type="Boolean" />
+    <Property Name="IsCorporateHousing" Type="Boolean" />
+    <Property Name="HasBeach" Type="Boolean" />
+    <Property Name="HasPool" Type="Boolean" />
+    <Property Name="PoolCount" Type="Int32" />
+    <Property Name="HasBedandBreakfast" Type="Boolean" />
+    <Property Name="HasBusinessCenter" Type="Boolean" />
+    <Property Name="HasExerciseRoom" Type="Boolean" />
+    <Property Name="HasBarLounge" Type="Boolean" />
+    <Property Name="HasGiftShop" Type="Boolean" />
+    <Property Name="IsLEEDCertified" Type="Boolean" />
+    <Property Name="IsLifestyleBrand" Type="Boolean" />
+    <Property Name="HasMarina" Type="Boolean" />
+    <Property Name="HasParkingGarage" Type="Boolean" />
+    <Property Name="HasRetailSpace" Type="Boolean" />
+    <Property Name="HasShuttle" Type="Boolean" />
+    <Property Name="IsPermanentClosure" Type="Boolean" />
+    <Property Name="IsUnderRenovation" Type="Boolean" />
+    <Property Name="IsUnderConstruction" Type="Boolean" />
+    <Property Name="HasInteriorCorridors" Type="Boolean" />
+    <Property Name="HasExteriorCorridors" Type="Boolean" />
+    <Property Name="FloorCount" Type="Int32" />
+    <Property Name="SingleLowRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SingleHighRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleLowRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleHighRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteLowRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteHighRate" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SingleRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SingleRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="DoubleRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteRateLowLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="SuiteRateHighLocal" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="ChainID" Type="Int32" />
+    <Property Name="ChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChainStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ChainCodeFP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FirstChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PreviousChainStartDate" Type="DateTime" Precision="3" />
+    <Property Name="PreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="TwoPreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TwoPreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TwoPreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TwoPreviousChainStartDate" Type="DateTime" Precision="3" />
+    <Property Name="TwoPreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ThreePreviousChainName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ThreePreviousChainCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ThreePreviousChainExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ThreePreviousChainStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ThreePreviousChainStartYYYYMM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ScaleID" Type="Int32" />
+    <Property Name="ScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="scalecode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="CollapsedScaleID" Type="Int32" />
+    <Property Name="CollapsedScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollapsedClassID" Type="Int32" />
+    <Property Name="CollapsedClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PlusScaleID" Type="Int32" />
+    <Property Name="PlusScaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoID" Type="Int32" />
+    <Property Name="MgmtCoCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MgmtCoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoStartDate" Type="DateTime" Precision="3" />
+    <Property Name="MgmtCoExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoPostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MgmtCoWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerID" Type="Int32" />
+    <Property Name="OwnerCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="OwnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerStartDate" Type="DateTime" Precision="3" />
+    <Property Name="OwnerExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerPostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoID" Type="Int32" />
+    <Property Name="AssetMgmtCoCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoStartDate" Type="DateTime" Precision="3" />
+    <Property Name="AssetMgmtCoExternalID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoContactName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoCity" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoState" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoCountry" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoPostalCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AssetMgmtCoWebsite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCoID" Type="Int32" />
+    <Property Name="ParentCoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCoCodeFP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HiltonID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="HyattSpiritCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IHGComp" Type="Boolean" />
+    <Property Name="CurrencyID" Type="Int32" />
+    <Property Name="CurrencyISO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClosedJan" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedFeb" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedMar" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedApr" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedMay" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedJun" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedJul" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedAug" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedSep" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedOct" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedNov" Type="Boolean" Nullable="false" />
+    <Property Name="ClosedDec" Type="Boolean" Nullable="false" />
+    <Property Name="AllowSegmentation" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlyStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsDailyStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlySegStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsDailySegStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlyAddRevStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsDailyAddRevStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsWeeklyStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="IsWeeklySegStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="CurrentTotalRooms" Type="Int32" />
+    <Property Name="RoomsAddDropCount1" Type="Int32" />
+    <Property Name="RoomsAddDropDate1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="RoomsAddDropDate1YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="RoomsAddDropCount2" Type="Int32" />
+    <Property Name="RoomsAddDropDate2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="RoomsAddDropDate2YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="RoomsAddDropCount3" Type="Int32" />
+    <Property Name="RoomsAddDropDate3" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="RoomsAddDropDate3YYYYMMDD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ShareID" Type="Int32" Nullable="false" />
+    <Property Name="MembershipID1" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MembershipName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MembershipID2" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MembershipName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MembershipID3" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MembershipName3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsWeeklySTARHotelSurvey" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlySTARParticipationLastMonth" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlyHotelSurvey" Type="Boolean" Nullable="false" />
+    <Property Name="IsMonthlySegParticipationLastMonth" Type="Boolean" Nullable="false" />
+    <Property Name="ChainShareID" Type="Int32" />
+    <Property Name="MgmtCoShareID" Type="Int32" />
+    <Property Name="OwnerShareID" Type="Int32" />
+    <Property Name="ParentCoShareID" Type="Int32" />
+    <Property Name="ExpediaMarketID" Type="Int32" />
+    <Property Name="IsMonthlyStarParticipantWCompset" Type="Boolean" />
+    <Property Name="IsDailyStarParticipantWCompset" Type="Boolean" />
+    <Property Name="IsMonthlySegParticipantWSuffCompset" Type="Boolean" />
+    <Property Name="IsServicedApartments" Type="Boolean" />
+    <Property Name="StarRating" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StarRatingCode" Type="Decimal" Precision="2" Scale="1" />
+    <Property Name="IsDailyCasinoStarParticipant" Type="Boolean" />
+    <Property Name="IsWeeklyCasinoStarParticipant" Type="Boolean" />
+    <Property Name="IsMonthlyCasinoStarParticipant" Type="Boolean" />
+    <Property Name="IsMonthlyFBStarParticipant" Type="Boolean" Nullable="false" />
+    <Property Name="RefAustradeSA2ID" Type="Int32" />
+    <Property Name="AustradeAccommodationTypeID" Type="Int32" />
+    <Property Name="AustradeAccommodationOverride" Type="Boolean" />
+    <Property Name="AustradeSA2Override" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="HotelReportEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Census" EntityType="HotelReportModel.Censu" />
+  </EntityContainer>
+</Schema>
