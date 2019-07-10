@@ -36,7 +36,7 @@ namespace TrendCheckerdService.Code.DataAccess.Repositories
                 Country = result.CountryName,
                 CountryCode = result.CountryCode,
                 Market = result.MarketName,
-                MarketCode = result.MarketCode,
+                MarketCode = int.Parse(result.MarketCode),
                 TotalRoomCount = result.TotalRooms ?? 0,
                 Brand = result.ChainName,
                 ManagementCompany = result.MgmtCoName,

@@ -17,6 +17,6 @@ namespace TrendCheckerdService.Code.DataAccess.DTOs
         public string ParentCompany { get; set; }
         public int TotalRoomCount { get; set; }
         public string CountryCode { get; set; }
-        public string MarketCode { get; set; }
+        public int MarketCode { get; set; }
     }
 }
