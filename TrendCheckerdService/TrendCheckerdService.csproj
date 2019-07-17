@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Contract\Request\TrendCheckRequest.cs" />
+    <Compile Include="Code\Contract\Response\TrendCheckError.cs" />
     <Compile Include="Code\Contract\Response\TrendCheckResponse.cs" />
     <Compile Include="Code\DataAccess\Database\Censu.cs">
       <DependentUpon>HotelReportModel.tt</DependentUpon>
@@ -106,6 +107,8 @@
     <Compile Include="Code\DataAccess\DTOs\CensusDTO.cs" />
     <Compile Include="Code\DataAccess\Repositories\CensusRepository.cs" />
     <Compile Include="Code\TrendCheckManger\TrendCheckManger.cs" />
+    <Compile Include="Code\TrendCheckRules\InvalidMarketRule.cs" />
+    <Compile Include="Code\TrendCheckRules\IRule.cs" />
     <Compile Include="TrendCheckService.svc.cs">
       <DependentUpon>TrendCheckService.svc</DependentUpon>
     </Compile>

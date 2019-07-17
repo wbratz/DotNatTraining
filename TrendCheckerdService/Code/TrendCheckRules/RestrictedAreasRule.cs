@@ -4,10 +4,16 @@ using TrendCheckerdService.Code.DataAccess.DTOs;
 
 namespace TrendCheckerdService.Code.TrendCheckRules
 {
-    public class InvalidMarketRule : IRule
+    public class RestrictedAreasRule : IRule
     {
-        private List<int> _badMarkets = new List<int> { 82 };
-        private string errorMessage = $"These CensusIds are in an invalid market";
+        private readonly List<string> _restrictedAreas = new List<string>
+        {
+            "Finland", "Norway", "Sweden", "Lithuania", "Latvia", "Estonia", "Denmark", "Belgium",
+            "Luxembourg", "France", "Germany", "Bulgaria", "Romania", "Netherlands", "Iceland",
+            "Slovakia", "Czech Republic", "Cuba"
+        };
+
+        private string errorMessage = $"These CensusIds are in an AREA 51!!!";
 
         public TrendCheckError ExecuteRule(List<CensusDto> censusData)
         {
@@ -18,7 +24,7 @@ namespace TrendCheckerdService.Code.TrendCheckRules
 
             foreach (var censusProperty in censusData)
             {
-                if (_badMarkets.Contains(censusProperty.MarketCode))
+                if (_restrictedAreas.Contains(censusProperty.Country))
                 {
                     errors.OffendingCensusIds.Add(censusProperty.CensusId);
                 }

@@ -9,7 +9,13 @@ namespace TrendCheckerdService.Code.TrendCheckManger
 {
     public class TrendCheckManger
     {
-        private List<IRule> rulesToExecute = new List<IRule>();
+        private List<IRule> _rulesToExecute = new List<IRule>
+        {
+            new InvalidMarketRule(),
+            new RestrictedAreasRule(),
+            new MinimumPropertiesRule(),
+            new SinglePropertyShareRule()
+        };
 
         public TrendCheckResponse CheckTrendOk(TrendCheckRequest trendCheckRequest)
         {
@@ -19,7 +25,7 @@ namespace TrendCheckerdService.Code.TrendCheckManger
             var censusData = new CensusRepository().GetCensusInfo(trendCheckRequest.CensusIds);
 
             //process that data and run rules
-            foreach(var rule in rulesToExecute)
+            foreach(var rule in _rulesToExecute)
             {
                 var results = rule.ExecuteRule(censusData);
                 if (results.OffendingCensusIds.Any())
