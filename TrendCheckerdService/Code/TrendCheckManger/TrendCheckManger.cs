@@ -34,6 +34,7 @@ namespace TrendCheckerdService.Code.TrendCheckManger
                 }
             }
 
+            response.TrendCheckOk = !response.TrendCheckErrors.Any();
             //formulate a response data
             return response;
         }

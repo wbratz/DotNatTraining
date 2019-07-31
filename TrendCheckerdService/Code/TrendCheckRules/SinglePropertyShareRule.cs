@@ -20,7 +20,7 @@ namespace TrendCheckerdService.Code.TrendCheckRules
             };
 
             var totalRooms = censusData.Sum(x => x.TotalRoomCount);
-            var maxRoomAllotment = totalRooms * (_maximumRoomsPercentage / 100);
+            var maxRoomAllotment = totalRooms * ((double) _maximumRoomsPercentage / 100);
 
             foreach (var property in censusData)
             {

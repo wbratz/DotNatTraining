@@ -109,6 +109,9 @@
     <Compile Include="Code\TrendCheckManger\TrendCheckManger.cs" />
     <Compile Include="Code\TrendCheckRules\InvalidMarketRule.cs" />
     <Compile Include="Code\TrendCheckRules\IRule.cs" />
+    <Compile Include="Code\TrendCheckRules\MinimumPropertiesRule.cs" />
+    <Compile Include="Code\TrendCheckRules\RestrictedAreasRule.cs" />
+    <Compile Include="Code\TrendCheckRules\SinglePropertyShareRule.cs" />
     <Compile Include="TrendCheckService.svc.cs">
       <DependentUpon>TrendCheckService.svc</DependentUpon>
     </Compile>

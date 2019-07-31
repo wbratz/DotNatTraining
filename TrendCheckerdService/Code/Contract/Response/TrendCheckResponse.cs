@@ -8,10 +8,7 @@ namespace TrendCheckerdService.Code.Contract.Response
     public class TrendCheckResponse
     {
         [DataMember]
-        public bool TrendCheckOk
-        {
-            get { return TrendCheckErrors.Any(); }
-        }
+        public bool TrendCheckOk { get; set; }
 
         public List<TrendCheckError> TrendCheckErrors => new List<TrendCheckError>();
     }
