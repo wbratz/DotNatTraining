@@ -14,7 +14,8 @@ namespace TrendCheckerdService.Code.TrendCheckManger
             new InvalidMarketRule(),
             new RestrictedAreasRule(),
             new MinimumPropertiesRule(),
-            new SinglePropertyShareRule()
+            new SinglePropertyShareRule(),
+            new BrandCompanyShareRule()
         };
 
         public TrendCheckResponse CheckTrendOk(TrendCheckRequest trendCheckRequest)
